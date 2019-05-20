@@ -686,7 +686,8 @@ class HTMLTestRunner(Template_mixin):
             else:
                 name = "%s.%s" % (cls.__module__, cls.__name__)
             doc = cls.__doc__ and cls.__doc__.split("\n")[0] or ""
-            desc = doc and '%s: %s' % (name, doc) or name
+            # desc = doc and '%s: %s' % (name, doc) or name
+            desc = doc or name
 
             row = self.REPORT_CLASS_TMPL % dict(
                 style=ne > 0 and 'errorClass' or nf > 0 and 'failClass' or 'passClass',
