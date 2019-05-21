@@ -41,7 +41,7 @@ class TestWeekly(unittest.TestCase):
 
     @add_Screen
     def test02(self):
-        """测试2"""
+        """测试截图"""
         j = 0
         for j in range(10):
             print(j)
