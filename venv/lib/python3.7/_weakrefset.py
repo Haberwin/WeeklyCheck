@@ -20,7 +20,7 @@ class _IterationGuard:
     def __enter__(self):
         w = self.weakcontainer()
         if w is not None:
-            w._iterating.add(self)
+            w._iterating.add
         return self
 
     def __exit__(self, e, t, b):

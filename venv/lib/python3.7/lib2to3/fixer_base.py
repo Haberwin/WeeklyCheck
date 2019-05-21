@@ -110,7 +110,7 @@ class BaseFix(object):
         name = template
         while name in self.used_names:
             name = template + str(next(self.numbers))
-        self.used_names.add(name)
+        self.used_names.add
         return name
 
     def log_message(self, message):

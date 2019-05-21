@@ -4146,15 +4146,15 @@ class Context(object):
     def add(self, a, b):
         """Return the sum of the two operands.
 
-        >>> ExtendedContext.add(Decimal('12'), Decimal('7.00'))
+        >>> ExtendedContext.add
         Decimal('19.00')
-        >>> ExtendedContext.add(Decimal('1E+2'), Decimal('1.01E+4'))
+        >>> ExtendedContext.add
         Decimal('1.02E+4')
-        >>> ExtendedContext.add(1, Decimal(2))
+        >>> ExtendedContext.add
         Decimal('3')
-        >>> ExtendedContext.add(Decimal(8), 5)
+        >>> ExtendedContext.add
         Decimal('13')
-        >>> ExtendedContext.add(5, 5)
+        >>> ExtendedContext.add
         Decimal('10')
         """
         a = _convert_other(a, raiseit=True)

@@ -37,7 +37,7 @@ class FixXrange(fixer_base.BaseFix):
         name = results["name"]
         name.replace(Name("range", prefix=name.prefix))
         # This prevents the new range call from being wrapped in a list later.
-        self.transformed_xranges.add(id(node))
+        self.transformed_xranges.add
 
     def transform_range(self, node, results):
         if (id(node) not in self.transformed_xranges and

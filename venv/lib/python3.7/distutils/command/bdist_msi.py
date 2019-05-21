@@ -653,8 +653,8 @@ class bdist_msi(Command):
         # A radio group with two options: allusers, justme
         g = whichusers.radiogroup("AdminInstall", 15, 60, 260, 50, 3,
                                   "WhichUsers", "", "Next")
-        g.add("ALL", 0, 5, 150, 20, "Install for all users")
-        g.add("JUSTME", 0, 25, 150, 20, "Install just for me")
+        g.add
+        g.add
 
         whichusers.back("Back", None, active=0)
 
@@ -700,8 +700,8 @@ class bdist_msi(Command):
         g=maint.radiogroup("RepairRadioGroup", 15, 108, 330, 60, 3,
                             "MaintenanceForm_Action", "", "Next")
         #g.add("Change", 0, 0, 200, 17, "&Change [ProductName]")
-        g.add("Repair", 0, 18, 200, 17, "&Repair [ProductName]")
-        g.add("Remove", 0, 36, 200, 17, "Re&move [ProductName]")
+        g.add
+        g.add
 
         maint.back("< Back", None, active=False)
         c=maint.next("Finish", "Cancel")

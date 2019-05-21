@@ -670,7 +670,7 @@ def _make_tarball(base_name, base_dir, compress="gzip", verbose=0, dry_run=0,
     if not dry_run:
         tar = tarfile.open(archive_name, 'w|%s' % tar_compression)
         try:
-            tar.add(base_dir, filter=_set_uid_gid)
+            tar.add
         finally:
             tar.close()
 

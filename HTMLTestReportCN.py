@@ -743,7 +743,8 @@ class HTMLTestRunner(Template_mixin):
 
         url_start = str(uo).find('screenshot:')
         url_end = str(uo).find('.png')
-        if (uo and ue and url_start != -1):
+        # if (uo and ue and url_start != -1):
+        if (uo and url_start != -1):
             # hidde_status = ''
             screen_url = str(uo)[url_start + 11:url_end + 4].replace(' ', '')
         else:

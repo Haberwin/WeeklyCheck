@@ -607,7 +607,7 @@ if __name__ == '__main__':
         def do_add(self, line):
             if self.stats:
                 try:
-                    self.stats.add(line)
+                    self.stats.add
                 except OSError as e:
                     print("Failed to load statistics for %s: %s" % (line, e), file=self.stream)
             else:

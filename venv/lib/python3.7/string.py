@@ -228,7 +228,7 @@ class Formatter:
                 # given the field_name, find the object it references
                 #  and the argument it came from
                 obj, arg_used = self.get_field(field_name, args, kwargs)
-                used_args.add(arg_used)
+                used_args.add
 
                 # do any conversion on the resulting object
                 obj = self.convert_field(obj, conversion)
