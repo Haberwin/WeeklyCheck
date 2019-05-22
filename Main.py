@@ -14,7 +14,7 @@ def init_devices():
     subprocess.run("adb shell pm install -r -t /data/local/tmp/app-uiautomator.apk", shell=True)
 
 if __name__ =='__main__':
-    init_devices()
+    # init_devices()
     d=Device("18011B1AC8")
     d.press.home()
 
