@@ -1,5 +1,5 @@
 import time
-
+import re
 from smb.SMBConnection import SMBConnection
 import socket
 
@@ -13,9 +13,16 @@ result = conn.connect(ser_ip, ser_port)
 assert conn.auth_result
 iTimeNow=time.time()
 fStartTime=0.00
+sTargetDir=''
 for f in conn.listPath('software','VQ405\Weekly'):
-    fStartTime=f.create_time if f.create_time>fStartTime  else fStartTime
-
+    if f.create_time>fStartTime:
+        fStartTime = f.create_time
+        sTargetDir=f.filename
+    else:
+        fStartTime
+for f in conn.listPath('software','VQ405\Weekly\%s'%sTargetDir):
+    if re.search(r'\w+-ota-\d+.zip',f.filename):
+        print(f.filename)
 if(iTimeNow-fStartTime<=7*24*3600):
     print(fStartTime)
 
